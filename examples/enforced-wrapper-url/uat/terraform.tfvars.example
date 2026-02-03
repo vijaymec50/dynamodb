@@ -1,0 +1,21 @@
+environment           = "uat"
+region                = "us-east-1"
+# Replace REGION, ACCOUNT_ID and KEY_ID with your values
+kms_key_arn            = "arn:aws:kms:REGION:ACCOUNT_ID:key/EXAMPLE-KMS-KEY"
+table_definition_repo = "example-org/dynamodb-table-definitions"
+table_definition_path = "tables/app-table.json"
+
+nonprod_principal_arns = [
+  "arn:aws:iam::ACCOUNT_ID:role/app-nonprod"
+]
+
+table = {
+  on_demand_throughput = {
+    max_read_request_units  = 1
+    max_write_request_units = 1
+  }
+
+  tags = {
+    Environment = "uat"
+  }
+}
