@@ -14,3 +14,7 @@ See `examples/enforced-wrapper` for prod and non-prod variable files using the e
 ## Enforced wrapper with public URL table definition
 
 See `examples/enforced-wrapper-url` for env-specific tfvars using the public GitHub JSON definition wrapper.
+
+## Wrapper3 example (registry module source)
+
+See `examples/wrapper3` for env-specific tfvars using the registry module source wrapper.
